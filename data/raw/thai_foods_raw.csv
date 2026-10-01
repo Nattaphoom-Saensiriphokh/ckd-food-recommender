@@ -1,0 +1,50 @@
+food_id,name,protein_g,energy_kcal,carb_g,fat_g,fiber_g,sugar_g,water_g,potassium_mg,phosphorus_mg,sodium_mg,proxy_usda,pdf_page
+01017,"ข้าวเจ้า นึ่ง (Rice, polished, steamed)",2.8,141,31.2,0.5,0.1,,65.4,,11,,"^Rice, white, long-grain, regular, (?!.*with salt)(?!.*raw).*(?<!un)cooked",11
+01039,"ข้าวเหนียว นึ่ง (Rice, glutinous, steamed)",4.1,230,51.8,0.6,0.5,,42.9,,12,,"^Rice, white, glutinous.*(?<!un)cooked",12
+01029,"ข้าวโพดเหลือง ต้ม (Corn, yellow, boiled)",4.3,117,17.4,3.3,1.3,,74.5,,47,,"^Corn, sweet, yellow, cooked, boiled, drained, without salt",12
+06050,"หมู เนื้อ ดิบ (Pork, meat, raw)",19.6,110,0.4,3.3,0.0,,75.8,,,,"^Pork, fresh, loin, tenderloin, separable lean only, raw",63
+06005,"ไก่ เนื้อ ดิบ (Chicken, meat, raw)",19.5,165,0.0,9.7,0.0,,69.5,,,,"^Chicken, broilers or fryers, meat only, raw",60
+08003,"ไข่ไก่ ทั้งฟอง (Egg, hen, whole)",12.77,143,1.17,9.65,0.0,,75.5,156,169,165,,76
+08001,"ไข่ไก่ ไข่ขาว (Egg, hen, white)",11.49,48,0.4,0.07,0.0,,87.2,189,11,217,,76
+08002,"ไข่ไก่ ไข่แดง (Egg, hen, yolk)",15.0,292,3.19,24.42,0.0,,55.8,123,296,90,,76
+08012,"ไข่เป็ด ทั้งฟอง (Egg, duck, whole)",13.03,178,1.54,13.35,0.0,,71.0,161,209,133,,76
+05012,"กล้วยน้ำ สุก (Banana, Nam variety, ripe)",1.04,110,22.59,0.1,7.2,20.7,68.2,318,29,1,,46
+05001,"กล้วยไข่ สุก (Banana, Khai variety, ripe)",1.24,108,24.26,0.2,1.9,21.84,71.4,269,16,2,,46
+05108,"มะละกอ ฮอลแลนด์ สุก (Papaya, Holland variety, ripe)",0.7,39,8.0,0.1,1.7,9.0,89.0,224,11,5,,53
+05107,"มะละกอ แขกดำ สุก (Papaya, Kak-dum variety, ripe)",0.6,39,8.1,0.1,1.7,8.0,89.0,229,14,3,,53
+04120,ผักบุ้งจีน (Water convolvulus),1.72,16,0.27,0.34,2.3,,94.27,270,26,130,,35
+04121,"ผักบุ้งไทย ต้นขาว (Water spinach, white)",2.18,22,1.34,0.32,2.4,,92.8,359,33,67,,35
+04122,"ผักบุ้งไทย ต้นแดง (Water spinach, red)",1.68,16,0.28,0.29,3.0,,93.8,439,30,26,,35
+11044,"ข้าวผัดหมู (Fried rice with pork, vegetable and egg)",6.01,181,20.79,8.2,0.2,,64.0,67,70,288,,94
+11045,ข้าวมันไก่ (Rice cooked in chicken-broth topped with chicken),5.36,219,28.01,9.51,,,55.9,82,48,483,,94
+11047,ข้าวราดแกงเขียวหวานไก่ (Rice topped with chicken green curry),5.22,133,19.25,3.9,0.4,,70.9,80,89,170,,94
+11048,ข้าวราดแกงคั่วกลิ้งหมู (Rice topped with minced pork and yellow curry paste),3.93,159,25.13,4.71,,,65.2,141,84,254,,94
+11052,"ข้าวราดแกงพะแนงหมู (Rice topped with curry, pork, Pha-naeng)",7.29,136,20.84,2.65,,,68.2,129,67,424,,94
+11055,"ข้าวราดแกงส้มผักรวม (Rice topped with tamarind soup, mixed vegetables)",2.91,85,17.77,0.23,,,77.9,96,33,401,,94
+11057,ข้าวราดไข่เจียวสมุนไพร (Rice topped with herb omelet),5.06,210,24.65,10.1,,,59.8,65,68,96,,95
+11058,ข้าวราดไข่เจียวหมูสับ (Rice topped with minced pork omelet),8.15,236,15.93,15.56,,,59.6,107,100,200,,95
+11063,"ข้าวราดผัดกะเพราไก่ (Rice topped with stir-fried chicken, chilli and basil)",8.95,174,22.19,5.48,,,62.0,140,83,696,,95
+11084,"ข้าวราดหมูทอดกระเทียมพริกไทย (Rice topped with fried pork, garlic and pepper)",6.1,193,31.16,4.91,,,57.0,107,88,267,,97
+11085,ข้าวราดหมูสับผัดซอส (Rice topped with stir-fried minced pork and soy sauce),7.9,190,27.78,5.21,,,58.1,163,115,836,,97
+11088,ข้าวหมูอบ (Rice with baked seasoning pork),7.94,174,23.76,5.28,,,61.7,171,76,546,,97
+11005,"ก๋วยเตี๋ยวคั่วไก่ (Rice noodles with chicken, fried)",6.94,198,23.77,8.36,,,59.7,102,88,384,,90
+11003,"ก๋วยจั๊บน้ำข้น (Rice noodles, big sheet, soup with meat and tofu)",3.91,67,8.49,1.88,,,84.3,93,48,482,,90
+11010,บะหมี่เกี๊ยว หมูแดง น้ำ (Wheat noodles with roasted pork and soup),3.61,68,8.53,2.2,,,84.8,92,29,397,,90
+11011,"บะหมี่หมู แห้ง (Wheat noodles with pork, without soup)",10.89,190,17.54,8.47,,,61.3,133,85,974,,90
+11008,"ก๋วยเตี๋ยววุ้นเส้นเย็นตาโฟ น้ำ (Mung bean noodles, Yen-ta-fo)",2.26,84,12.67,2.74,,,81.1,60,24,545,,90
+11093,"สุกี้ รวมมิตร แห้ง (Suki with meat, seafood and vegetables, stir-fried)",5.7,104,10.27,4.44,,,78.3,114,60,515,,98
+11091,"สุกี้ ไก่ น้ำ (Suki with chicken, vegetables and soup)",3.76,47,5.49,1.1,,,88.1,81,41,656,,97
+11095,หมี่กรอบ ราดหน้าทะเล (Crispy fried rice noodles with seafood and gravy),3.58,114,12.72,5.47,,,76.8,83,36,514,,98
+11097,"หอยทอด (Green mussel fried with flour, egg and mungbean sprout)",8.86,292,16.13,21.36,,,52.1,109,209,556,,98
+11104,ต้มเลือดหมู (Tom-leud-moo),5.05,36,1.04,1.3,,,91.6,120,57,335,,98
+11135,"แกงเขียวหวานหมู (Green curry, pork)",6.31,136,0.0,12.32,,,82.7,242,64,571,,101
+11134,"แกงขี้เหล็ก (Curry, cassia leaves)",2.8,182,0.0,19.02,,,81.8,142,44,598,,101
+11136,แกงบอน (Kang-bon),1.55,39,7.53,0.32,,,88.2,152,26,437,,101
+11137,"แกงส้มผักรวมกับปลาช่อน (Kang-som, vegetables and striped snakehead fish)",1.96,24,2.91,0.49,,,93.1,128,27,509,,101
+11138,แกงหมูชะมวง (Kang-moo-chamoung),10.28,194,22.82,6.5,2.0,,56.6,249,100,625,,101
+11141,"ขนมจีนน้ำพริก (Round rice noodles with shrimp, mungbean, peanut and curry)",3.58,168,19.06,8.57,,,65.9,204,61,413,,101
+11143,ขนมจีนน้ำยา (Round rice noodles with fish curry and coconut milk),2.4,95,9.07,5.4,,,81.8,165,35,436,,101
+11195,"ขนมจีนน้ำยาป่า (Round rice noodles with fish curry, no coconut milk)",2.2,47,8.9,0.24,,,87.4,100,31,374,,106
+11201,ลาบเนื้อ รวมผักสด (Spicy minced beef salad with vegetable),12.4,112,5.96,4.0,1.4,,73.9,276,112,650,,106
+11203,"ส้มตำปลาร้า (Papaya, fermented fish, salad)",2.15,36,4.11,0.64,2.8,,87.9,197,29,716,,106
+11200,"ตำมะเขือพวง (Solanum, spicy salad)",8.32,94,6.5,2.23,7.3,,70.9,392,147,1106,,106

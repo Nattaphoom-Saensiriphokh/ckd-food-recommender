@@ -1,0 +1,274 @@
+|--- phosphorus_mg <= -0.24
+|   |--- sodium_mg <= -0.05
+|   |   |--- potassium_mg <= -0.10
+|   |   |   |--- potassium_mg <= -0.22
+|   |   |   |   |--- protein_g <= -0.00
+|   |   |   |   |   |--- sodium_mg <= -0.09
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- sodium_mg >  -0.09
+|   |   |   |   |   |   |--- stage_group <= 0.61
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- stage_group >  0.61
+|   |   |   |   |   |   |   |--- phosphorus_mg <= -0.89
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- phosphorus_mg >  -0.89
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- protein_g >  -0.00
+|   |   |   |   |   |--- stage_group <= 0.61
+|   |   |   |   |   |   |--- protein_g <= 0.25
+|   |   |   |   |   |   |   |--- energy_kcal <= -0.81
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- energy_kcal >  -0.81
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- protein_g >  0.25
+|   |   |   |   |   |   |   |--- stage_group <= -0.61
+|   |   |   |   |   |   |   |   |--- protein_g <= 0.71
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- protein_g >  0.71
+|   |   |   |   |   |   |   |   |   |--- sodium_mg <= -0.13
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- sodium_mg >  -0.13
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- stage_group >  -0.61
+|   |   |   |   |   |   |   |   |--- potassium_mg <= -0.65
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- potassium_mg >  -0.65
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- stage_group >  0.61
+|   |   |   |   |   |   |--- protein_g <= 0.71
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- protein_g >  0.71
+|   |   |   |   |   |   |   |--- protein_g <= 0.83
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- protein_g >  0.83
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |--- potassium_mg >  -0.22
+|   |   |   |   |--- stage_group <= 0.61
+|   |   |   |   |   |--- protein_g <= 0.24
+|   |   |   |   |   |   |--- energy_kcal <= -1.21
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- energy_kcal >  -1.21
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- protein_g >  0.24
+|   |   |   |   |   |   |--- stage_group <= -0.61
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- stage_group >  -0.61
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- stage_group >  0.61
+|   |   |   |   |   |--- class: 1
+|   |   |--- potassium_mg >  -0.10
+|   |   |   |--- potassium_mg <= 0.27
+|   |   |   |   |--- stage_group <= -0.61
+|   |   |   |   |   |--- potassium_mg <= 0.15
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- potassium_mg >  0.15
+|   |   |   |   |   |   |--- phosphorus_mg <= -0.81
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- phosphorus_mg >  -0.81
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- stage_group >  -0.61
+|   |   |   |   |   |--- stage_group <= 0.61
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- stage_group >  0.61
+|   |   |   |   |   |   |--- potassium_mg <= 0.02
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- potassium_mg >  0.02
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |--- potassium_mg >  0.27
+|   |   |   |   |--- stage_group <= -0.61
+|   |   |   |   |   |--- potassium_mg <= 0.51
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- potassium_mg >  0.51
+|   |   |   |   |   |   |--- energy_kcal <= -1.23
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- energy_kcal >  -1.23
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- stage_group >  -0.61
+|   |   |   |   |   |--- sodium_mg <= -0.32
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- sodium_mg >  -0.32
+|   |   |   |   |   |   |--- class: 2
+|   |--- sodium_mg >  -0.05
+|   |   |--- sodium_mg <= 0.35
+|   |   |   |--- stage_group <= -0.61
+|   |   |   |   |--- sodium_mg <= 0.13
+|   |   |   |   |   |--- potassium_mg <= 0.14
+|   |   |   |   |   |   |--- energy_kcal <= -1.28
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- energy_kcal >  -1.28
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- potassium_mg >  0.14
+|   |   |   |   |   |   |--- potassium_mg <= 0.52
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- potassium_mg >  0.52
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- sodium_mg >  0.13
+|   |   |   |   |   |--- potassium_mg <= 0.43
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- potassium_mg >  0.43
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |--- stage_group >  -0.61
+|   |   |   |   |--- potassium_mg <= 0.27
+|   |   |   |   |   |--- sodium_mg <= 0.02
+|   |   |   |   |   |   |--- stage_group <= 0.61
+|   |   |   |   |   |   |   |--- potassium_mg <= -0.11
+|   |   |   |   |   |   |   |   |--- protein_g <= 0.45
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- protein_g >  0.45
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- potassium_mg >  -0.11
+|   |   |   |   |   |   |   |   |--- energy_kcal <= -1.25
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- energy_kcal >  -1.25
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- stage_group >  0.61
+|   |   |   |   |   |   |   |--- potassium_mg <= 0.03
+|   |   |   |   |   |   |   |   |--- water_g <= -1.86
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- water_g >  -1.86
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- potassium_mg >  0.03
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- sodium_mg >  0.02
+|   |   |   |   |   |   |--- stage_group <= 0.61
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- stage_group >  0.61
+|   |   |   |   |   |   |   |--- sodium_mg <= 0.13
+|   |   |   |   |   |   |   |   |--- potassium_mg <= 0.03
+|   |   |   |   |   |   |   |   |   |--- fat_g <= -0.65
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- fat_g >  -0.65
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- potassium_mg >  0.03
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- sodium_mg >  0.13
+|   |   |   |   |   |   |   |   |--- protein_g <= -1.10
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- protein_g >  -1.10
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- potassium_mg >  0.27
+|   |   |   |   |   |--- sugar_g <= -0.44
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- sugar_g >  -0.44
+|   |   |   |   |   |   |--- class: 2
+|   |   |--- sodium_mg >  0.35
+|   |   |   |--- stage_group <= -0.61
+|   |   |   |   |--- sodium_mg <= 0.57
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- sodium_mg >  0.57
+|   |   |   |   |   |--- class: 2
+|   |   |   |--- stage_group >  -0.61
+|   |   |   |   |--- class: 2
+|--- phosphorus_mg >  -0.24
+|   |--- phosphorus_mg <= 0.46
+|   |   |--- stage_group <= 0.61
+|   |   |   |--- sodium_mg <= 0.57
+|   |   |   |   |--- protein_g <= 1.65
+|   |   |   |   |   |--- potassium_mg <= 0.51
+|   |   |   |   |   |   |--- protein_g <= 1.19
+|   |   |   |   |   |   |   |--- protein_g <= 0.73
+|   |   |   |   |   |   |   |   |--- stage_group <= -0.61
+|   |   |   |   |   |   |   |   |   |--- sodium_mg <= 0.12
+|   |   |   |   |   |   |   |   |   |   |--- phosphorus_mg <= 0.19
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- phosphorus_mg >  0.19
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- sodium_mg >  0.12
+|   |   |   |   |   |   |   |   |   |   |--- sodium_mg <= 0.13
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- sodium_mg >  0.13
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- stage_group >  -0.61
+|   |   |   |   |   |   |   |   |   |--- sodium_mg <= 0.35
+|   |   |   |   |   |   |   |   |   |   |--- potassium_mg <= 0.27
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- potassium_mg >  0.27
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- sodium_mg >  0.35
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- protein_g >  0.73
+|   |   |   |   |   |   |   |   |--- potassium_mg <= 0.27
+|   |   |   |   |   |   |   |   |   |--- sodium_mg <= 0.35
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- sodium_mg >  0.35
+|   |   |   |   |   |   |   |   |   |   |--- stage_group <= -0.61
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- stage_group >  -0.61
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- potassium_mg >  0.27
+|   |   |   |   |   |   |   |   |   |--- stage_group <= -0.61
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- stage_group >  -0.61
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- protein_g >  1.19
+|   |   |   |   |   |   |   |--- stage_group <= -0.61
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- stage_group >  -0.61
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- potassium_mg >  0.51
+|   |   |   |   |   |   |--- fat_g <= -0.65
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- fat_g >  -0.65
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- protein_g >  1.65
+|   |   |   |   |   |--- water_g <= -0.54
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- water_g >  -0.54
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |--- sodium_mg >  0.57
+|   |   |   |   |--- fiber_g <= -0.44
+|   |   |   |   |   |--- class: 2
+|   |   |   |   |--- fiber_g >  -0.44
+|   |   |   |   |   |--- class: 2
+|   |   |--- stage_group >  0.61
+|   |   |   |--- protein_g <= 0.72
+|   |   |   |   |--- sodium_mg <= 0.13
+|   |   |   |   |   |--- potassium_mg <= 0.02
+|   |   |   |   |   |   |--- phosphorus_mg <= 0.19
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- phosphorus_mg >  0.19
+|   |   |   |   |   |   |   |--- sugar_g <= -0.44
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- sugar_g >  -0.44
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- potassium_mg >  0.02
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- sodium_mg >  0.13
+|   |   |   |   |   |--- class: 2
+|   |   |   |--- protein_g >  0.72
+|   |   |   |   |--- protein_g <= 0.73
+|   |   |   |   |   |--- potassium_mg <= 0.02
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- potassium_mg >  0.02
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- protein_g >  0.73
+|   |   |   |   |   |--- class: 2
+|   |--- phosphorus_mg >  0.46
+|   |   |--- stage_group <= -0.61
+|   |   |   |--- phosphorus_mg <= 0.74
+|   |   |   |   |--- sodium_mg <= 0.57
+|   |   |   |   |   |--- potassium_mg <= 0.52
+|   |   |   |   |   |   |--- protein_g <= 1.65
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- protein_g >  1.65
+|   |   |   |   |   |   |   |--- fiber_g <= -0.43
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- fiber_g >  -0.43
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- potassium_mg >  0.52
+|   |   |   |   |   |   |--- phosphorus_mg <= 0.47
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- phosphorus_mg >  0.47
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- sodium_mg >  0.57
+|   |   |   |   |   |--- protein_g <= -0.48
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- protein_g >  -0.48
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |--- phosphorus_mg >  0.74
+|   |   |   |   |--- class: 2
+|   |   |--- stage_group >  -0.61
+|   |   |   |--- stage_group <= 0.61
+|   |   |   |   |--- class: 2
+|   |   |   |--- stage_group >  0.61
+|   |   |   |   |--- class: 2

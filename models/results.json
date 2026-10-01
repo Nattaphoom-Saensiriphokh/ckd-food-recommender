@@ -1,0 +1,87 @@
+{
+  "Baseline": {
+    "accuracy": 0.4483143558830096,
+    "f1_macro": 0.2063614408303787
+  },
+  "DecisionTree": {
+    "best_params": {
+      "clf__max_depth": "None",
+      "clf__min_samples_leaf": "1"
+    },
+    "cv_f1_macro": 0.9964542418595064,
+    "accuracy": 0.9979906229068989,
+    "f1_macro": 0.9978600036052278,
+    "red_recall": 0.99800796812749,
+    "confusion_matrix": [
+      [
+        1176,
+        3,
+        0
+      ],
+      [
+        1,
+        1290,
+        1
+      ],
+      [
+        0,
+        4,
+        2004
+      ]
+    ]
+  },
+  "kNN": {
+    "best_params": {
+      "clf__n_neighbors": "5",
+      "clf__weights": "distance"
+    },
+    "cv_f1_macro": 0.9042248499316058,
+    "accuracy": 0.9118106720250055,
+    "f1_macro": 0.9071962462924774,
+    "red_recall": 0.9252988047808764,
+    "confusion_matrix": [
+      [
+        1099,
+        67,
+        13
+      ],
+      [
+        97,
+        1127,
+        68
+      ],
+      [
+        7,
+        143,
+        1858
+      ]
+    ]
+  },
+  "ANN": {
+    "best_params": {
+      "clf__alpha": "0.0001",
+      "clf__hidden_layer_sizes": "(32, 16)"
+    },
+    "cv_f1_macro": 0.9830270197847071,
+    "accuracy": 0.9801294931904443,
+    "f1_macro": 0.9783401873726612,
+    "red_recall": 0.9895418326693227,
+    "confusion_matrix": [
+      [
+        1148,
+        30,
+        1
+      ],
+      [
+        18,
+        1255,
+        19
+      ],
+      [
+        0,
+        21,
+        1987
+      ]
+    ]
+  }
+}
