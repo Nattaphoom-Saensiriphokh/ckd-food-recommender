@@ -140,5 +140,10 @@ export function buildEngine(tree, data) {
     return food.n[nutIdx[key]];
   }
 
-  return { foods, predict, reasons, substitutes, search, nutrient };
+  // ใช้คัดอาหารที่ไม่เหมาะจะแนะนำ (เช่น อาหารเด็กอ่อน) ออกจากรายการแนะนำ
+  function isExcluded(name) {
+    return badRe.test(name);
+  }
+
+  return { foods, predict, reasons, substitutes, search, nutrient, isExcluded };
 }

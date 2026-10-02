@@ -1,15 +1,16 @@
 "use client";
+import "./theme.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Nav from "../lib/Nav";
+import Header from "../lib/Header";
+import Gauge, { Legend } from "../lib/Gauge";
 import { useStage } from "../lib/useStage";
 import { loadLimits } from "../lib/limits";
 import { STAGE_LABEL, NUTRIENT_TH } from "../lib/engine";
 
 const ORDER = ["potassium_mg", "phosphorus_mg", "sodium_mg", "protein_g"];
 const UNIT = { potassium_mg: "mg", phosphorus_mg: "mg", sodium_mg: "mg", protein_g: "g" };
-
-const Dot = ({ c }) => <span className={`inline-block h-3 w-3 rounded-full mr-2 ${c}`} />;
+const NOTE = { 1: "จำกัดน้อยที่สุด", 2: "จำกัดปานกลาง", 3: "จำกัดเข้มงวดที่สุด" };
 
 export default function Home() {
   const [stage, setStage] = useStage();
@@ -23,90 +24,66 @@ export default function Home() {
   const cur = limits ? limits[String(stage)] : null;
 
   return (
-    <main className="mx-auto max-w-3xl p-6 space-y-6">
-      <header className="space-y-3">
-        <h1 className="text-2xl font-bold">ระบบแนะนำอาหารสำหรับผู้ป่วยโรคไต</h1>
-        <Nav />
-      </header>
+    <main className="wrap">
+      <Header />
+
+      <section className="hero">
+        <h1 className="h-title">ข้อจำกัดด้านโภชนาการ</h1>
+        <p className="lead">
+          เลือกระยะโรคของผู้ป่วย ระบบจะใช้เกณฑ์ของระยะนั้นตัดสินสีของอาหารที่คุณค้นหา
+        </p>
+      </section>
 
       <section>
-        <h2 className="mb-2 text-lg font-semibold">ข้อจำกัดด้านโภชนาการ</h2>
-        <p className="mb-3 text-sm opacity-70">
-          เลือกระยะโรคของผู้ป่วย ระบบจะใช้เกณฑ์ของระยะนั้นตัดสินสีของอาหารในหน้าค้นหา
-        </p>
-        <div className="grid gap-2 sm:grid-cols-3">
+        <h2 className="sec-title">ระยะโรค</h2>
+        <div className="stage-grid" role="radiogroup" aria-label="ระยะโรค">
           {[1, 2, 3].map((s) => (
-            <button
-              key={s}
-              onClick={() => setStage(s)}
-              className={`rounded-lg border-2 p-3 text-left ${
-                stage === s ? "border-blue-600 bg-blue-600/10" : "border-neutral-400"
-              }`}
-            >
-              <p className="font-medium">{STAGE_LABEL[s]}</p>
-              <p className="text-xs opacity-70">
-                {s === 1 ? "จำกัดน้อยที่สุด" : s === 2 ? "จำกัดปานกลาง" : "จำกัดเข้มงวดที่สุด"}
-              </p>
+            <button key={s} role="radio" aria-checked={stage === s}
+              className={`stage-btn ${stage === s ? "on" : ""}`} onClick={() => setStage(s)}>
+              <span className="strict" aria-hidden="true">
+                {[1, 2, 3].map((n) => <i key={n} className={n <= s ? "fill" : ""} />)}
+              </span>
+              <span className="stage-name">{STAGE_LABEL[s]}</span>
+              <span className="stage-note">{NOTE[s]}</span>
             </button>
           ))}
         </div>
       </section>
 
-      <section>
-        <h3 className="mb-2 font-medium">เกณฑ์ของ {STAGE_LABEL[stage]} (ต่อ 100 g ของอาหาร)</h3>
-        {err && <p className="text-sm text-red-500">โหลดเกณฑ์ไม่สำเร็จ: {err}</p>}
-        {!err && !cur && <p className="text-sm opacity-70">กำลังโหลดเกณฑ์...</p>}
-        {cur && (
-          <div className="overflow-x-auto rounded border border-neutral-300 dark:border-neutral-700">
-            <table className="w-full text-sm">
-              <thead className="bg-neutral-500/10 text-left">
-                <tr>
-                  <th className="p-2">สารอาหาร</th>
-                  <th className="p-2"><Dot c="bg-green-500" />เหมาะสม</th>
-                  <th className="p-2"><Dot c="bg-yellow-400" />ควรจำกัด</th>
-                  <th className="p-2"><Dot c="bg-red-500" />ควรหลีกเลี่ยง</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ORDER.map((n) => {
-                  const [y, r] = cur[n];
-                  const u = UNIT[n];
-                  return (
-                    <tr key={n} className="border-t border-neutral-300 dark:border-neutral-700">
-                      <td className="p-2 font-medium">{NUTRIENT_TH[n]}</td>
-                      <td className="p-2">น้อยกว่า {y} {u}</td>
-                      <td className="p-2">{y} ถึงต่ำกว่า {r} {u}</td>
-                      <td className="p-2">ตั้งแต่ {r} {u} ขึ้นไป</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        )}
-        <p className="mt-2 text-xs opacity-70">
-          หลักการ: ถ้าสารอาหารตัวใดตัวหนึ่งถึงเกณฑ์สีแดง อาหารนั้นจะเป็นสีแดงทั้งหมด
+      <section className="section card">
+        <div className="card-head">
+          <h2 className="sec-title">เกณฑ์ของ {STAGE_LABEL[stage]}</h2>
+          <p className="muted small">ปริมาณสารอาหารต่ออาหาร 100 g</p>
+        </div>
+        <Legend />
+        {err && <p className="small">โหลดเกณฑ์ไม่สำเร็จ ลองรีเฟรชหน้านี้ ({err})</p>}
+        {!err && !cur && <p className="muted small">กำลังโหลดเกณฑ์...</p>}
+        {cur && ORDER.map((n) => (
+          <Gauge key={n} label={NUTRIENT_TH[n]} unit={UNIT[n]} yellow={cur[n][0]} red={cur[n][1]} />
+        ))}
+        <p className="rule">
+          ถ้าสารอาหารตัวใดตัวหนึ่งถึงเกณฑ์สีแดง อาหารนั้นจะเป็นสีแดงทั้งหมด
           ถ้าไม่มีตัวใดถึงสีแดงแต่มีตัวถึงสีเหลือง จะเป็นสีเหลือง
         </p>
       </section>
 
       {limits && (
-        <details className="rounded border border-neutral-300 dark:border-neutral-700 p-3 text-sm">
-          <summary className="cursor-pointer font-medium">เปรียบเทียบเกณฑ์ทุกระยะ (เกณฑ์สีแดง)</summary>
-          <div className="mt-3 overflow-x-auto">
-            <table className="w-full">
-              <thead className="text-left">
+        <details className="section card">
+          <summary>เปรียบเทียบเกณฑ์สีแดงของทุกระยะ</summary>
+          <div className="scroll-x">
+            <table className="cmp">
+              <thead>
                 <tr>
-                  <th className="p-1">สารอาหาร</th>
-                  {[1, 2, 3].map((s) => <th key={s} className="p-1">{STAGE_LABEL[s]}</th>)}
+                  <th>สารอาหาร</th>
+                  {[1, 2, 3].map((s) => <th key={s}>{STAGE_LABEL[s]}</th>)}
                 </tr>
               </thead>
               <tbody>
                 {ORDER.map((n) => (
-                  <tr key={n} className="border-t border-neutral-300 dark:border-neutral-700">
-                    <td className="p-1">{NUTRIENT_TH[n]}</td>
+                  <tr key={n}>
+                    <td>{NUTRIENT_TH[n]}</td>
                     {[1, 2, 3].map((s) => (
-                      <td key={s} className="p-1">≥ {limits[String(s)][n][1]} {UNIT[n]}</td>
+                      <td key={s}>ตั้งแต่ {limits[String(s)][n][1]} {UNIT[n]}</td>
                     ))}
                   </tr>
                 ))}
@@ -116,14 +93,11 @@ export default function Home() {
         </details>
       )}
 
-      <Link
-        href="/search"
-        className="inline-block rounded bg-blue-600 px-5 py-2 text-white"
-      >
-        ไปค้นหาอาหาร →
-      </Link>
+      <div className="section">
+        <Link href="/search" className="btn">ไปค้นหาอาหาร</Link>
+      </div>
 
-      <footer className="border-t border-neutral-300 dark:border-neutral-700 pt-4 text-xs opacity-70">
+      <footer className="foot">
         ระบบนี้เป็นเครื่องมือเพื่อการศึกษา ไม่ใช่คำแนะนำทางการแพทย์ เกณฑ์สารอาหารเป็นค่าตัวอย่าง
         ควรปรึกษาแพทย์หรือนักกำหนดอาหารก่อนนำไปใช้จริง
       </footer>
