@@ -13,18 +13,9 @@ NUT = ["protein_g", "energy_kcal", "carb_g", "fat_g", "fiber_g", "sugar_g",
        "water_g", "potassium_mg", "phosphorus_mg", "sodium_mg"]
 
 df = pd.read_csv("data/foods_clean.csv")
-df["source"] = "usda"
-
-# ถ้ามีไฟล์อาหารไทย (ขั้นที่ 8) ให้รวมเข้ามาด้วย
-thai_path = Path("data/thai_foods.csv")
-if thai_path.exists():
-    thai = pd.read_csv(thai_path)
-    thai["fdc_id"] = range(-1, -len(thai) - 1, -1)   # id ติดลบ กันชนกับ USDA
-    thai["source"] = "thai"
-    for c in NUT:
-        thai[c] = thai[c].fillna(df[c].median())
-    df = pd.concat([df, thai[df.columns]], ignore_index=True)
-    print(f"รวมอาหารไทย {len(thai)} รายการ")
+# foods_clean.csv มีคอลัมน์ source (usda/thai) จาก 01b_merge_thai.py อยู่แล้ว ห้ามเขียนทับ
+if "source" not in df.columns:
+    df["source"] = "usda"
 
 # 1) log1p ลดความเบ้ แล้ว scale
 Xs = StandardScaler().fit_transform(np.log1p(df[NUT]))
